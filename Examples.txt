@@ -1,0 +1,33 @@
+S -> F
+   | S + F
+   | S * F
+   | S / F
+   | S - F
+F -> a
+
+-----
+
+goal -> expr
+expr -> expr + term 
+      | expr - term 
+      | term
+term -> term * factor 
+      | term / factor 
+      | factor
+factor -> ( expr ) 
+        | num 
+        | id
+
+-----
+
+S -> F
+   | ( S + F )
+F -> a
+
+-----
+
+S -> S F
+   | F
+F -> 0
+   | 1
+
